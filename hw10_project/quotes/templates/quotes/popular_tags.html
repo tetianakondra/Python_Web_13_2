@@ -1,0 +1,15 @@
+{% extends 'quotes/base.html' %}
+{% load extract %}
+
+{% block content%}
+
+
+<div class="popular_tags">
+    Tags:
+    {% for tag in popular_tags %}
+    <a class="tag" href="{% url 'quotes:quotes_with_tag' tag %}">{{tag}}</a>
+    {% endfor%}
+</div>
+
+
+{% endblock %}

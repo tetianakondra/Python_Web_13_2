@@ -1,0 +1,28 @@
+{% extends 'quotes/base.html' %}
+{% load extract %}
+
+{% block content%}
+
+<h3>Add author</h3>
+<form action="{% url 'quotes:addauthor' %}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="row mb-3">
+        <label for="">Fullname</label>
+        {{form.fullname}}
+    </div>
+    <div class="row mb-3">
+        <label for="">Born date</label>
+        {{form.born_date}}
+    </div>
+    <div class="row mb-3">
+        <label for="">Born location</label>
+        {{form.born_location}}
+    </div>
+    <div class="row mb-3">
+        <label for="">Description</label>
+        {{form.description}}
+    </div>
+    <button type="submit" class="btn btn-primary">Add author</button>
+</form>
+
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'quotes/base.html' %}
+{% load extract %}
+
+{% block content%}
+
+<h1>{{auth_about.fullname}}</h1>
+
+<p>Born date: <b>{{auth_about.born_date}}</b></p>
+<p>Born location: <b>{{auth_about.born_location}}</b></p>
+<p>Description: <b>{{auth_about.description}}</b></p>
+        
+{% endblock %}
