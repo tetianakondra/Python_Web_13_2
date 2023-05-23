@@ -1,4 +1,4 @@
-Please, make in main folder .env 
+Please, make in this folder .env 
 
 SECRET_KEY=secret
 POSTGRES_USER=user
